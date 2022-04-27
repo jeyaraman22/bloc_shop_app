@@ -1,0 +1,1 @@
+# bloc_shop_app
