@@ -8,7 +8,6 @@ class IntroScreenBloc extends Bloc<IntroScreenDispatchEvent,IntroScreenState>{
     on<InitiateIntroScreenEvent>((event, emit)async{
       SharedPreferences prefs = await SharedPreferences.getInstance();
       var introScreenFlow = prefs.getString("introScreenFlow");
-      print("INITIAL___value $introScreenFlow");
       if(introScreenFlow == "Done"){
         emit(CompletedIntroScreenState(introScreenFlow!));
       }else {
@@ -22,7 +21,6 @@ class IntroScreenBloc extends Bloc<IntroScreenDispatchEvent,IntroScreenState>{
       await prefs.setString("introScreenFlow", "Done");
       var introScreenFlow = prefs.getString("introScreenFlow");
       await Future.delayed(const Duration(seconds: 2));
-      print("COMPLETED... VALUE $introScreenFlow");
       emit(CompletedIntroScreenState(introScreenFlow!));                  ///  This state will provide navigation to application home screen..
     });
 
