@@ -38,6 +38,10 @@ dependencies:
   flutter_bloc: ^8.0.1
   equatable: ^2.0.3
   shared_preferences: ^2.0.13
+  firebase_core: ^1.13.1
+  cloud_firestore: ^3.1.10
+  carousel_slider: ^4.0.0
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:

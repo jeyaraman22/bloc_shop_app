@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app_bloc/bloc/intro_bloc/intro_screen_bloc_event.dart';
 import 'package:shop_app_bloc/bloc/intro_bloc/intro_screen_bloc_state.dart';
+import 'package:shop_app_bloc/screens/home_page.dart';
 import 'package:shop_app_bloc/screens/home_screen.dart';
 import 'package:shop_app_bloc/widgets/intro_screen_widget.dart';
 
@@ -33,7 +34,7 @@ class _AppIntroScreenState extends State<AppIntroScreen> {
          return IntroScreen().buildIntroScreen(context);
        }else
          if(state is CompletedIntroScreenState){
-           return const ShopMainScreen();
+           return const HomePage();
          }else{
            return const Center(child: Text("Error Occurred.."),);
          }
