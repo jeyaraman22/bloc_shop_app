@@ -13,6 +13,7 @@ import 'package:shop_app_bloc/bloc/product_bloc/product_state.dart';
 import 'package:shop_app_bloc/utils/dynamicheigthwidth.dart';
 import 'package:shop_app_bloc/widgets/carousel_sliders.dart';
 
+import '../bloc/banner_bloc/banner_events.dart';
 import 'add_product.dart';
 
 
@@ -85,15 +86,15 @@ class _HomePageState extends State<HomePage> {
                           keys = val;
                         },
                       ),
-                      Positioned(
-                          right: 34,
-                          top: 11,
-                          child: Text(
-                            (count+ 1).toString() +
-                                "/" +
-                                images.length.toString(),
-                            style: TextStyle(color: Colors.grey[500]),
-                          ))
+                      // Positioned(
+                      //     right: 34,
+                      //     top: 11,
+                      //     child: Text(
+                      //       (count+ 1).toString() +
+                      //           "/" +
+                      //           images.length.toString(),
+                      //       style: TextStyle(color: Colors.grey[500]),
+                      //     ))
                     ],
                   ),
                 );

@@ -99,7 +99,7 @@ class _AddNewProductState extends State<AddNewProduct> {
         title: const Text("Add New Product"),
         centerTitle: true,
         leading: IconButton(onPressed: () {
-          Navigator.of(context).popUntil((route) => route.isFirst);
+          Navigator.of(context).pop();
           context.read<ProductBloc>().add(LoadProductEvents());
           context.read<RecentProductBloc>().add(LoadRecentProductEvents());
           // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  const HomePage()));
@@ -125,7 +125,7 @@ class _AddNewProductState extends State<AddNewProduct> {
       }
       if (state is AddProductLoadedState) {
         return AlertComponent(title: "Success State",message: "Product add successfully",onpress: (){
-          Navigator.of(context).popUntil((route) => route.isFirst);
+          Navigator.of(context).pop();
           context.read<ProductBloc>().add(LoadProductEvents());
           context.read<RecentProductBloc>().add(LoadRecentProductEvents());
           // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  HomePage()));
