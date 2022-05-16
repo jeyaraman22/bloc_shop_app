@@ -26,6 +26,10 @@ class DefaultFirebaseOptions {
         return ios;
       case TargetPlatform.macOS:
         return macos;
+      case TargetPlatform.windows:
+        return windows;
+      case TargetPlatform.linux:
+        return linux;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -69,5 +73,25 @@ class DefaultFirebaseOptions {
     storageBucket: 'fir-crud-4e476.appspot.com',
     iosClientId: '252986816093-7js46v8pmunbufnhjsufvsmk4mu7tbvt.apps.googleusercontent.com',
     iosBundleId: 'com.example.shopappMultiplatform',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyCXRi-qfrzIMP28ak4j1dU6HxH-1A0Y2EM',
+    appId: '1:252986816093:web:cf97478b6182affd627fb4',
+    messagingSenderId: '252986816093',
+    projectId: 'fir-crud-4e476',
+    authDomain: 'fir-crud-4e476.firebaseapp.com',
+    storageBucket: 'fir-crud-4e476.appspot.com',
+    measurementId: 'G-TRY1CFVR5K',
+  );
+
+  static const FirebaseOptions linux = FirebaseOptions(
+    apiKey: 'AIzaSyCXRi-qfrzIMP28ak4j1dU6HxH-1A0Y2EM',
+    appId: '1:252986816093:web:dcfdd427306358a7627fb4',
+    messagingSenderId: '252986816093',
+    projectId: 'fir-crud-4e476',
+    authDomain: 'fir-crud-4e476.firebaseapp.com',
+    storageBucket: 'fir-crud-4e476.appspot.com',
+    measurementId: 'G-JYDTCEL5CF',
   );
 }

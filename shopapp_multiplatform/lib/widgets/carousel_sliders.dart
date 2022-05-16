@@ -6,6 +6,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CaroselSlider extends StatefulWidget {
   final int indexValue;
+  final double caroselheight;
   final List images;
   final bool sliderautoplay;
   final double viewportfraction;
@@ -19,6 +20,7 @@ class CaroselSlider extends StatefulWidget {
   const CaroselSlider(
       {Key? key,
       required this.indexValue,
+        required this.caroselheight,
       required this.images,
       required this.enlargecenterimage,
       required this.imageslideduration,
@@ -56,7 +58,7 @@ class CaroselSliderState extends State<CaroselSlider> {
             return buildImage(urlImage, index);
           },
           options: CarouselOptions(
-            height: getDeviceheight(context, 0.45),
+            height: widget.caroselheight,
             initialPage: 0,
             autoPlay: widget.sliderautoplay,
             viewportFraction: widget.viewportfraction,
